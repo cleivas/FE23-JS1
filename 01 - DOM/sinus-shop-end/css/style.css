@@ -1,0 +1,147 @@
+/* :root selectar rootelementet vilket är html-elementet. Men specifiteten är högre än om vi hade selectat html */
+:root {
+  /* en css custom property (alltså variabel) */
+  --width: 1000px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.red-bg{
+  background-color: red;
+  transition: .5s;
+}
+
+.active {
+  background-color: blue;
+  color: white;
+}
+
+.wrapper {
+  height: 100vh;
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+header {
+  /* var(--width) innebär 1000px */
+  max-width: var(--width);
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+header > img.logo {
+  max-width: 8rem;
+  width: 100%;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+}
+
+header nav a,
+footer a {
+  color: rgba(0, 0, 0, 0.8);
+  text-decoration: none;
+  margin: 0 0.5rem;
+}
+
+footer section article {
+  display: flex;
+  flex-direction: column;
+}
+
+header nav img {
+  margin-left: 1rem;
+}
+
+main {
+  max-width: var(--width);
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+main article {
+  height: 33rem;
+  width: 100%;
+  margin: 1rem;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 3rem rgba(0, 0, 0, 0.2);
+}
+
+main article figure {
+  padding: 2rem 1rem 0 1rem;
+  background: rgb(244, 182, 10);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+main article figure img {
+  width: 80%;
+}
+
+main article h2 {
+  padding: 0.5rem 1rem 0rem 1rem;
+}
+main article h3 {
+  padding: 0rem 1rem 1rem 1rem;
+  font-weight: 500;
+  opacity: 0.6;
+}
+
+main article p {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  line-height: 140%;
+}
+
+main article button {
+  appearance: none;
+  border: none;
+  background: #222;
+  color: #eee;
+  margin: auto auto 2rem auto;
+  padding: 1rem 1.5rem;
+  width: 6rem;
+  border-radius: 0.25rem;
+}
+
+footer {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.03);
+  height: 16rem;
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0;
+}
+
+footer section {
+  max-width: var(--width);
+  width: 100%;
+  display: flex;
+  box-sizing: border-box;
+}
+
+footer section article {
+  flex: 1;
+  margin: 0 2rem;
+}
+
+footer section article a {
+  margin: 0.25rem 0;
+}
