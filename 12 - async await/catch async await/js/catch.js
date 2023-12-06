@@ -23,7 +23,6 @@ fetch(url)
         console.log('Det var ett error')
         console.log(error)
         displayError('Försök igen');
-        // skapa html-element för att visa användaren ett felmeddelande
     })
 
     function displayError(message){
