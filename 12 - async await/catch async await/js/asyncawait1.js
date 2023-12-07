@@ -1,8 +1,8 @@
 
 // Med catch i slutet på promisekedjan
 async function fetchRandomDogImage() {
-    //const url = `https://dog.ceo/api/breeds/image/random`; //Fungerar
-    //const url = `https://dog.ceo/api/breeds/im/random`; //Ger statuskod 404 men alla promises blir fulfilled
+    // const url = `https://dog.ceo/api/breeds/image/random`; //Fungerar
+    // const url = `https://dog.ceo/api/breeds/im/random`; //Ger statuskod 404 men alla promises blir fulfilled
     const url = `https://og.ceo/api/breeds/image/random`; //Promiset från fetch blir rejected
 
     const response = await fetch(url);
@@ -20,11 +20,13 @@ async function fetchRandomDogImage() {
 }
 
 function displayDogImage(imgUrl) {
+    console.log(imgUrl)
     const img = document.createElement('img');
     img.src = imgUrl;
     document.body.append(img);
 }
 function displayError(error) {
+    console.log(error)
     const h1 = document.createElement('h1');
 
     if(error === 404){ //Vid Errormeddelandet som vi har definierat

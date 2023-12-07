@@ -7,7 +7,7 @@ async function fetchRandomDogImage() {
     try{
         const response = await fetch(url);
         console.log(response);
-    
+
         if(response.ok){ //om allt är okej
             const data = await response.json();
             console.log(data);
@@ -32,6 +32,7 @@ function displayDogImage(imgUrl) {
     document.body.append(img);
 }
 function displayError(error) {
+    console.log(error)
     const h1 = document.createElement('h1');
 
     if(error === 404){ //Vid Errormeddelandet som vi har definierat
