@@ -1,0 +1,19 @@
+#single{
+    background-color: hotpink;
+    height: 100px;
+    aspect-ratio: 1/1;
+    
+}
+
+#container div{
+    background-color: black;
+    width: 50px;
+    aspect-ratio: 1/1;
+   
+}
+
+#container{
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-around;
+}
