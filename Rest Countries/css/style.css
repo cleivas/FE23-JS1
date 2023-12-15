@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Rethink+Sans&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: 0;
+}
+:root {
+    --main-bg-color: hsl(0, 0%, 25%);
+    --second-bg-color:  hsl(0, 0%, 10%);
+    --main-accent-color: hsl(290, 62%, 62%);
+    --second-accent-color: hsl(290, 46%, 69%);
+    --main-text-color: hsl(0, 0%, 87%);
+    --shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    border-radius: 3px;
+    --border-radius: 5px;
+  }
+
+body{
+    background-color:var(--main-bg-color);
+    font-family: 'Rethink Sans', sans-serif;
+}
+/* Header with form */
+header{
+    color: var(--main-text-color);
+    padding: 3rem 0 1.5rem;
+    background-color: var(--second-bg-color);
+    height: fit-content;
+}
+header h1{
+    font-size: 3rem;
+    text-align: center;
+}
+form{
+    width: fit-content;
+    margin: 2rem auto 0;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-end;
+}
+form>*{
+    margin: 0 .5rem;
+    height: 2rem;
+    font-size: 1.2rem;
+}
+form>button{
+    background-color: var(--main-accent-color);
+    height: 2.5rem;
+    padding: 0rem 1rem;
+    border-radius: 20px;
+}
+form>button:hover{
+    background-color: var(--main-accent-color);
+}
+form>button:active{
+    background-color: var(--second-accent-color);
+}
+input[type=text]{
+    padding-left: .3rem;
+    border-radius: var(--border-radius);
+}
+input[type='radio'] {
+    accent-color: var(--main-accent-color);
+}
+input[type=text]:focus{
+    outline: var(--main-accent-color) 2px solid;
+}
+fieldset{
+    width: 6.8rem;
+    padding-bottom: .8rem;
+    margin-right: 2rem;
+    border: none;
+}
+
+/* Countries */
+.container{
+    margin: 3rem auto;
+    max-width: 1200px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+.country-card{
+    background-color: var(--second-bg-color);
+    color: var(--main-text-color);
+    width: 320px;
+    margin: 2rem;
+    padding-bottom: 1rem;
+    box-shadow: var(--shadow);
+    border-radius: var(--border-radius);
+}
+.country-card>img{
+    margin-bottom: 1rem;
+}
+
+.country-card>*:not(img){
+    padding: 0 1rem .5rem; 
+}
+
+#errorContainer{
+    background-color: var(--second-bg-color);
+    color: var(--second-accent-color);
+    width: fit-content;
+    padding: 3rem;
+    box-shadow: var(--shadow);
+    border-radius: var(--border-radius);
+}
+
+.hide{
+    display: none;
+}

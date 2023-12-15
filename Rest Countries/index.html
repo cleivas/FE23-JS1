@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="#" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script1.js" defer></script>
+    <!-- <script src="js/script2.js" defer></script> -->
+    <!-- <script src="js/script3.js" defer></script> -->
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <h1>Search Countries</h1>
+        <form>
+            <input type="text" id="searchInput" placeholder="Sweden" required>
+            <fieldset>
+                <input type="radio" id="nameRadio" name="search-type" value="name" checked />
+                <label for="nameRadio">Country</label>
+                <input type="radio" id="languageRadio" name="search-type" value="lang" />
+                <label for="languageRadio">Language</label>
+            </fieldset>
+    
+            <button class="button-display">Get countries</button>
+        </form>
+    </header>
+
+    <main>
+        <div id="errorContainer" class="container">
+            <h2 id="errorMessage"></h2>
+        </div>
+    
+        <div id="countryContainer" class="container">
+            <!-- Sökresultatet  visas här -->
+        </div>
+    </main>
+    
+</body>
+
+</html>
