@@ -54,7 +54,7 @@ async function fetchCountries(term, type){
 function displayCountries(countries){
     const flexContainer = document.querySelector('#countryContainer');
 
-    countries.sort((a, b)=> b.population-a.population);
+    countries.sort((a, b)=> b.population-a.population); 
 
     for(const country of countries){
         const countryCardDiv = document.createElement('div');
